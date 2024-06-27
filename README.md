@@ -91,6 +91,7 @@ ___
 ___
 ## Files and Content
 - `models`: Directory hosting the downloaded LLM in GGUF format
+- `pdf`: Directory hosting the sample niche domain documents
 - `main.py`: Main Python script to launch the application
 - `custom_retriever.py`: CustomRetriever class incorporating vector and knowledge graph retrievers
 - `requirements.txt`: List of Python dependencies (and version)
