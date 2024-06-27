@@ -1,10 +1,10 @@
-# Knowledge Graph with Cassandra Vectorstore in a RAG using LlamaIndex and Mistral 7B for Local Documents
+# Knowledge Graph with Cassandra Vectorstore in a RAG Setup using LlamaIndex and Mistral 7B for Local Documents
 
 **Step-by-step guide on Medium**: [Evaluating the Impact of Knowledge Graph in RAG Powered By Cassandra Database](https://medium.com/@heelara/evaluating-the-impact-of-knowledge-graph-in-rag-powered-by-cassandra-database-5f7442b4b355)
 ___
 ## Context
 Retrieval-Augmented Generation (RAG) is a popular technique used to improve the text generation capability of an LLM by keeping it fact driven, but LLM hallucinations continue to be a challenge. Knowledge Graphs of your documents seem to a promising way forth here.
-In this project, we will develop a RAG application using LlamaIndex pipeline to use vector search powered by Apache Cassandra database along with an auto-generated knowledge graph using `KnowledgeGraphIndex` to serve as context for a locally hosted Mistral 7B LLM using llama-cpp-python.
+In this project, we will develop a RAG application using `LlamaIndex` pipeline to use vector search powered by Apache Cassandra NoSql database along with an auto-generated knowledge graph using `KnowledgeGraphIndex` to serve as context for a locally hosted Mistral 7B LLM using `llama-cpp-python`.
 <br><br>
 ![System Design](/assets/architecture.png)
 ___
@@ -23,7 +23,7 @@ $ mv apache-cassandra-5.0-beta1/* /opt/cassandra
 ```
 $ cassandra -f
 ```
-- Launch Cassandra CLI and create keyspace "vectorstore":
+- Launch Cassandra CLI from a different terminal and create keyspace "vectorstore":
 ```
 $ cqlsh
 Connected to Test Cluster at 127.0.0.1:9042
@@ -86,7 +86,7 @@ Time: 33.70136175000016
 ___
 ## Key Libraries
 - **LlamaIndex**: Framework for developing applications powered by LLM
-- **llama-cpp-python**: Library to load GGUF format LLM from a local directory
+- **llama-cpp-python**: Library to load GGUF-formatted LLM from a local directory
 
 ___
 ## Files and Content
